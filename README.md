@@ -1,6 +1,7 @@
-# starbase
+# Star Wars Team Builder 
 
-> A Vue.js project
+> A practice Vue.js project
+> Build your 3 person team from Star Wars characters
 
 ## Build Setup
 
@@ -11,8 +12,11 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
-npm run build
+# install Allow-Control-Allow-Origin chrome plugin
+[Allow-Control-Allow-Origin chrome plugin](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en)
+
+#open localhost:8080 in chrome
+
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
