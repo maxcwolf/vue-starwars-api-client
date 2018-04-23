@@ -1,6 +1,7 @@
 # Star Wars Team Builder 
 
 > A practice Vue.js project
+
 > Build your 3 person team from Star Wars characters
 
 ## Build Setup

@@ -2,6 +2,11 @@
   <div id='app'>
       <h3 class='display-1'>{{title}}</h3>
       <h4 class='text-muted'>{{subtitle}}</h4>
+      <h4>
+          <router-link class="link" to="/data/people">Pick the Characters</router-link> |
+          <router-link class="link" to="/data/planets">Explore the Planers</router-link>
+      </h4>
+      <router-view></router-view>
       <div class="col-md-12">
         <Character
             v-for="(id, index) in initial_ids"
@@ -12,19 +17,12 @@
 </template>
 
 <script>
-import Character from "./components/Character.vue";
+import Item from "./components/Item";
 export default {
   name: "app",
-  data() {
-    return {
-      title: "Generate Your Team",
-      subtitle: "Click on a card to get a new random character",
-      initial_ids: [1, 13, 14]
-    };
-  },
   components: {
-    Character
-  }
+    Item
+  },
 };
 </script>
 
