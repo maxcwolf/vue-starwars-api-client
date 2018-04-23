@@ -1,7 +1,7 @@
 <template>
   <div id='app'>
-      <h3>{{title}}</h3>
-      <h2></h2>
+      <h3 class='display-1'>{{title}}</h3>
+      <h4 class='text-muted'>{{subtitle}}</h4>
       <div class="col-md-12">
         <Character
             v-for="(id, index) in initial_ids"
