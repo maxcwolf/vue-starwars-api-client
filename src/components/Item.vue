@@ -1,10 +1,10 @@
 <template>
-  <div class='col-md-4' @click="switchItem">
-      <div class="item-card">
+  <div class='col-md-4'>
+      <div class="item-card"  @click="switchItem">
           <div class="card-block">
               <h4 class="card-title">{{item.name}}</h4>
               <div v-for="(value, key, index) in item" :key="index">
-                <div v-if="index < 5" class="">
+                <div v-if="index < 6 && index > 1" class="">
                   <strong> {{key}}</strong>: {{value}}
                 </div>
               </div>
@@ -15,20 +15,24 @@
 
 <script>
 export default {
-  props: ["item"],
+  props: ["passedItem", "type"],
   data() {
     return {
-      character: {}
-    };
+      item: {}
+    }
   },
   methods: {
     switchItem() {
-      let random_id = Math.floor(Math.random() * 83) + 1;
-      this.fetchCharacter(random_id);
+      let random_id = Math.floor(Math.random() * 63) + 1;
+      fetch(`http://swapi.co/api/${this.type}/${random_id}`, {
+        method: "GET"
+      })
+        .then(response => response.json())
+        .then(json => this.item = json)
     }
   },
   created() {
-    this.fetchCharacter(this.id);
+    this.item = this.passedItem
   }
 };
 </script>
